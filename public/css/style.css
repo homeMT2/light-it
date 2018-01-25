@@ -1,0 +1,84 @@
+/*---------*/
+/* Styles */
+/*-------*/
+
+/* Dfault */
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Enter */
+.fb-enter .fb_iframe_widget {
+    margin: 0 auto;
+    display: table;
+}
+
+.fb-enter #status {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Content */
+.content {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Blocks */
+.fb-enter,
+.comments,
+.add-comment {
+    border: 3px solid #444;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.textarea-comment {
+    width: calc(100% - 110px);
+    min-width: calc(100% - 110px);
+    max-width: calc(100% - 110px);
+    min-height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.button-comment-send {
+    width: 100px;
+    box-sizing: border-box;
+    float: right;
+    height: 56px;
+    background-color: #f05044;
+    border: #f05044;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Comments */
+.comment-content {
+    cursor: pointer;
+}
+
+.comment-content.select {
+    color: #f05044;
+}
+
+.comments .comment {
+    font-size: 18px;
+}
+
+.comments .comment.level-1 {
+    padding: 10px 0 10px 0;
+}
+
+.comments .comment.level-2 {
+    padding: 0 0 0 30px;
+}
+
+.comments .comment.level-3 {
+    padding: 0 0 0 30px;
+}
