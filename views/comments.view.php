@@ -20,6 +20,7 @@
             <div class="comments">
                 <?php include_once 'comment.php'; ?>
             </div>
+
         </div>
 
         <?php include_once 'foot.php'; ?>

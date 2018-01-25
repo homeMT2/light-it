@@ -37,13 +37,19 @@ $('#comment-send').on('click', function() {
         success: function(result) {
             var obj = jQuery.parseJSON( result )
 
-            if( obj.status == '200' ) {
-                location.reload();
-            }
-            else {
+            if( obj.status != '200' ) {
                 alert( obj.message );
             }
         }
     });
 
+    reloadPage();
+
 });
+
+function reloadPage()
+{
+    setTimeout(function(){
+        window.location.reload();
+    }, 300);
+}
