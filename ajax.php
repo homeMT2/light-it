@@ -9,8 +9,8 @@ if( isset( $_POST['action'] ) && $_POST['action'] == 'send_comment' ) {
 else {
     echo json_encode(
         array(
-            'status' => 'error',
-            'message' => 'Wat?'
+            "status" => 'error',
+            "message" => 'Wat?'
         )
     );
     die();
@@ -33,16 +33,14 @@ function ajax_send_comment( $query )
         if ($text == '') {
             return json_encode(
                 array(
-                    'status' => 'error',
-                    'message' => 'Enter comment text!'
+                    "status" => 'error',
+                    "message" => 'Enter comment text!'
                 )
             );
         }
         else {
 
             $comment = new Comment( 0, $text, time(), $level + 1, $id );
-
-            show( $comment );
 
             $result = $query->insert_comment( 'comment', $comment );
 

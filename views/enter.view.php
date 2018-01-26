@@ -4,7 +4,6 @@
     <head>
         <?php include_once 'head.php'; ?>
         <script src="./public/js/fb.js"></script>
-
     </head>
 
     <body>

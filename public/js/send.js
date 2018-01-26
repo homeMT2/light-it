@@ -27,7 +27,6 @@ $('#comment-send').on('click', function() {
     $.ajax({
         url : "ajax.php",
         type : 'post',
-        dataType: 'json',
         data : {
             action : 'send_comment',
             id : id,
@@ -35,15 +34,20 @@ $('#comment-send').on('click', function() {
             level: level
         },
         success: function(result) {
-            var obj = jQuery.parseJSON( result )
+
+            var obj = JSON.parse( result );
 
             if( obj.status != '200' ) {
                 alert( obj.message );
             }
+            else  {
+                reloadPage();
+            }
+        },
+        error: function(result) {
+            console.log( result );
         }
     });
-
-    reloadPage();
 
 });
 
